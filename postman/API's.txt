@@ -1,0 +1,231 @@
+Postman requests and responses for your Event Management System API:
+
+1. User Registration
+
+Route: POST /auth/register
+
+Headers:
+
+Content-Type: application/json
+
+Request Body:
+{
+  "username": "example_user",
+  "email": "user@example.com",
+  "password": "password123"
+}
+
+Response:
+{
+  "success": true,
+  "message": "User registered successfully"
+}
+
+2. User Login
+
+Route: POST /auth/login
+
+Headers:
+
+Content-Type: application/json
+
+Request Body:
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+
+Response:
+{
+  "success": true,
+  "message": "Login successful",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+
+3. Create Event
+
+Route: POST /events
+
+Headers:
+
+Content-Type: application/json
+
+Authorization: Bearer <token>
+
+Request Body:
+{
+  "title": "Tech Conference",
+  "description": "Annual tech conference showcasing latest technologies",
+  "date": "2024-03-15",
+  "time": "10:00:00",
+  "location": "Convention Center",
+  "organizer": "Tech Events Inc."
+}
+
+Response:
+{
+  "success": true,
+  "message": "Event created successfully",
+  "event": {
+    "id": 1,
+    "title": "Tech Conference",
+    "description": "Annual tech conference showcasing latest technologies",
+    "date": "2024-03-15",
+    "time": "10:00:00",
+    "location": "Convention Center",
+    "organizer": "Tech Events Inc."
+  }
+}
+
+4. Get All Events
+
+Route: GET /events
+
+Headers:
+
+Authorization: Bearer <token>
+
+Response:
+{
+  "success": true,
+  "events": [
+    {
+      "id": 1,
+      "title": "Tech Conference",
+      "description": "Annual tech conference showcasing latest technologies",
+      "date": "2024-03-15",
+      "time": "10:00:00",
+      "location": "Convention Center",
+      "organizer": "Tech Events Inc."
+    },
+    {
+      "id": 2,
+      "title": "Music Festival",
+      "description": "Annual music festival featuring top artists",
+      "date": "2024-06-20",
+      "time": "12:00:00",
+      "location": "City Park",
+      "organizer": "Music Events LLC"
+    }
+  ]
+}
+
+
+5. Get Event Details
+
+Route: GET /events/:id
+
+Headers:
+
+Authorization: Bearer <token>
+
+Response:
+{
+  "success": true,
+  "event": {
+    "id": 1,
+    "title": "Tech Conference",
+    "description": "Annual tech conference showcasing latest technologies",
+    "date": "2024-03-15",
+    "time": "10:00:00",
+    "location": "Convention Center",
+    "organizer": "Tech Events Inc."
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
